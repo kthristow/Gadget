@@ -7,6 +7,7 @@ import {
   TouchableOpacity,
   FlatList,
   Image,
+  ImageSourcePropType,
 } from "react-native";
 import { useCartStore } from "../store/cart-store";
 import { StatusBar } from "expo-status-bar";
@@ -14,7 +15,7 @@ import { StatusBar } from "expo-status-bar";
 type CartItemType = {
   id: number;
   title: string;
-  heroImage: string;
+  heroImage: ImageSourcePropType;
   price: number;
   quantity: number;
   maxQuantity: number;
@@ -36,7 +37,7 @@ const CartItem = ({
 }: CartItemProps) => {
   return (
     <View style={styles.cartItem}>
-      <Image source={{ uri: item.heroImage }} style={styles.itemImage} />
+      <Image source={item.heroImage} style={styles.itemImage} />
       <View style={styles.itemDetails}>
         <Text style={styles.itemTitle}>{item.title}</Text>
         <Text style={styles.itemPrice}>${item.price.toFixed(2)}</Text>

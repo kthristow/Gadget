@@ -7,7 +7,7 @@ export type Product = {
   slug: string;
   imagesUrl: ImageSourcePropType[];
   price: number;
-  heroImage: string;
+  heroImage: ImageSourcePropType;
   category: Omit<Category, 'products'>;
   maxQuantity: number;
 };

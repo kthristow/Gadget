@@ -67,7 +67,7 @@ const ProductDetails = () => {
   return (
     <View style={styles.container}>
       <Stack.Screen options={{ title: product.title }} />
-      <Image source={{uri: product.heroImage}} style={styles.heroImage} />
+      <Image source={product.heroImage} style={styles.heroImage} />
 
       <View style={{ padding: 16, flex: 1 }}>
         <Text style={styles.title}>Title: {product.title}</Text>
